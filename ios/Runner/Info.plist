@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>BANX</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BANX</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>NSCalendarsUsageDescription</key>
+    <string>This app requires access to your calendar to schedule events and provide relevant notifications.</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>yourIdentifier</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>banx</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>FlutterDeepLinkingEnabled</key>
+	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>Read SmartCard</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We need access to your Apple Music library to enhance media experiences.</string>
+	<key>NSBiometricUsageDescription</key>
+	<string>We need to use your Touch ID for authentication</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>We need Bluetooth access to connect to nearby devices and enhance features.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to the camera to record videos.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>We require access to your contacts for a better user experience.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>We need to use your Face ID for authentication</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need access to your location to offer location-based services.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need access to your location while using the app to enhance your experience.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Can I use the mic please?</string>
+	<key>NSMotionUsageDescription</key>
+	<string>We need access to motion data to improve the app’s performance or features.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to save videos to your gallery.</string>
+	<key>NSSiriUsageDescription</key>
+	<string>We require Siri access to provide voice assistant functionalities within the app.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>We need to access speech recognition for voice features.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
+	<array>
+		<string>8008</string>
+	</array>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A00000000386980701</string>
+	</array>
+</dict>
+</plist>
