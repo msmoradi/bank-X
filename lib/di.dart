@@ -15,12 +15,21 @@ import 'package:local_auth/local_auth.dart';
 import 'package:logger/logger.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
+import 'package:banx/core/networking/http_client.dart';
+import 'package:banx/core/networking/mock_api_service.dart';
+import 'package:banx/core/networking/api_service.dart';
 import 'core/utils/localauth/local_auth_setup.dart';
 
 final getIt = GetIt.instance;
 
+// Set useMockApi to true to run the app using local mock endpoints without production APIs
+const useMockApi = true;
+
 @InjectableInit()
-void configureDependencies() => getIt.init();
+void configureDependencies() {
+  getIt.init();
+}
+
 
 @module
 abstract class RegisterModule {
@@ -103,4 +112,13 @@ abstract class RegisterModule {
 
   @lazySingleton
   LocalAuthentication localAuthentication() => LocalAuthentication();
+
+  @lazySingleton
+  HTTPClient httpClient(Dio dio, TokenRepository tokenRepository) {
+    if (useMockApi) {
+      return MockApiService();
+    } else {
+      return ApiService(dio: dio, tokenRepository: tokenRepository);
+    }
+  }
 }

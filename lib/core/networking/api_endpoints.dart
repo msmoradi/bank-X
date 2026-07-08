@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 class ApiEndpoint {
   const ApiEndpoint._();
 
-  static const baseUrl = 'YOUR_BASE_URL_HERE'; // e.g. 'https://api.example.com'
+  static const baseUrl = 'https://api.example.com';
 
   static String auth(AuthEndpoint endpoint) {
     const path = '/api/v1/app/auth/';

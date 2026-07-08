@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -55,7 +56,6 @@ import 'package:banx/core/domain/repository/media_repository.dart' as _i654;
 import 'package:banx/core/domain/repository/passkey_repository.dart' as _i742;
 import 'package:banx/core/domain/repository/profile_repository.dart' as _i111;
 import 'package:banx/core/domain/repository/token_repository.dart' as _i232;
-import 'package:banx/core/networking/api_service.dart' as _i243;
 import 'package:banx/core/networking/http_client.dart' as _i1033;
 import 'package:banx/core/networking/interceptors/auth_interceptor.dart'
     as _i287;
@@ -176,9 +176,9 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i535.InfoInterceptor>(),
           gh<_i287.AuthInterceptor>(),
         ));
-    gh.lazySingleton<_i1033.HTTPClient>(() => _i243.ApiService(
-          dio: gh<_i361.Dio>(),
-          tokenRepository: gh<_i232.TokenRepository>(),
+    gh.lazySingleton<_i1033.HTTPClient>(() => registerModule.httpClient(
+          gh<_i361.Dio>(),
+          gh<_i232.TokenRepository>(),
         ));
     gh.lazySingleton<_i521.CardRemoteDataSource>(() =>
         _i749.CardRemoteDataSourceImpl(apiService: gh<_i1033.HTTPClient>()));
@@ -262,9 +262,9 @@ extension GetItInjectableX on _i174.GetIt {
         authenticationRepository: gh<_i474.AuthenticationRepository>()));
     gh.factory<_i402.PhoneBloc>(() => _i402.PhoneBloc(
         authenticationRepository: gh<_i474.AuthenticationRepository>()));
-    gh.factory<_i618.KycStatusBloc>(() => _i618.KycStatusBloc(
-        authenticationRepository: gh<_i474.AuthenticationRepository>()));
     gh.factory<_i801.IdentityCorrectionBloc>(() => _i801.IdentityCorrectionBloc(
+        authenticationRepository: gh<_i474.AuthenticationRepository>()));
+    gh.factory<_i618.KycStatusBloc>(() => _i618.KycStatusBloc(
         authenticationRepository: gh<_i474.AuthenticationRepository>()));
     gh.factory<_i339.ConfirmPasswordBloc>(() => _i339.ConfirmPasswordBloc(
           authenticationRepository: gh<_i474.AuthenticationRepository>(),
